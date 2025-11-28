@@ -9,6 +9,7 @@ import UlidUuidGenerator from "./components/UlidUuidGenerator";
 import IdAndPasswordToolPage from "./components/IdAndPasswordTool";
 import JsonDataGenerator from "./components/JsonDataGenerator";
 import HashingTool from "./components/HashingTool";
+import JsonSchemaValidator from "./components/JsonSchemaValidator";
 import type { Tool } from "./types/tools";
 
 import "./App.css";
@@ -60,6 +61,9 @@ function App() {
 
       case "hashing-tool":
         return <HashingTool />;
+
+      case "json-schema-validator":
+        return <JsonSchemaValidator />;
 
       default:
         return (

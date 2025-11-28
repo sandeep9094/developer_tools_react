@@ -119,6 +119,10 @@ const HashingTool: React.FC = () => {
     setError(null);
   };
 
+  const handleGenerateClick = () => {
+    void generateHash();
+  };
+
   return (
     <div className="hashing-container">
       <div className="hashing-card">
@@ -129,9 +133,14 @@ const HashingTool: React.FC = () => {
               Generate cryptographic hashes using MD5, SHA-1, SHA-256, SHA-384, or SHA-512 algorithms.
             </p>
           </div>
-          <button className="hashing-btn-reset" onClick={clearAll}>
-            Clear
-          </button>
+          <div className="hashing-header-actions">
+            <button className="hashing-btn-secondary" onClick={clearAll}>
+              Clear
+            </button>
+            <button className="hashing-btn-primary" onClick={handleGenerateClick} disabled={!input.trim()}>
+              Hash Now
+            </button>
+          </div>
         </div>
 
         <div className="hashing-controls">
@@ -151,6 +160,16 @@ const HashingTool: React.FC = () => {
               <option value="SHA-384">SHA-384</option>
               <option value="SHA-512">SHA-512</option>
             </select>
+          </div>
+          <div className="hashing-meta">
+            <div>
+              <span className="hashing-meta-label">Input Length:</span>
+              <span className="hashing-meta-value">{input.length} chars</span>
+            </div>
+            <div>
+              <span className="hashing-meta-label">Hash Length:</span>
+              <span className="hashing-meta-value">{output.length} chars</span>
+            </div>
           </div>
         </div>
 

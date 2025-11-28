@@ -6,4 +6,5 @@ export type Tool =
   | "ulid-uuid-generator"
   | "id-password-generator"
   | "json-data-generator"
-  | "hashing-tool";
+  | "hashing-tool"
+  | "json-schema-validator";

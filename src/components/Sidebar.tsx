@@ -16,6 +16,7 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "id-password-generator", name: "Password Generator", icon: "#" },
     { id: "json-data-generator", name: "JSON Data Generator", icon: "⚙" },
     { id: "hashing-tool", name: "Hash Generator", icon: "◉" },
+    { id: "json-schema-validator", name: "JSON Schema Validator", icon: "◇" },
   ];
 
   return (

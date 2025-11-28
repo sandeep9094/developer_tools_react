@@ -1,15 +1,19 @@
 import './Sidebar.css'
+import type { Tool } from '../types/tools'
 
 interface SidebarProps {
-  activeTool: string
-  onToolSelect: (tool: string) => void
+  activeTool: Tool
+  onToolSelect: (tool: Tool) => void
 }
 
 function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
-  const tools = [
-    { id: 'base32-encode', name: 'Base32 Encoding', icon: '{}' },
-    { id: 'base32-decode', name: 'Base32 Decoding', icon: '{}' },
-  ]
+  const tools: { id: Tool; name: string; icon: string }[] = [
+    { id: "json-beautifier", name: "JSON Beautifier", icon: "{ }" },
+    { id: "base32-encode", name: "Base32 Encoding", icon: "⇧" },
+    { id: "base32-decode", name: "Base32 Decoding", icon: "⇩" },
+    { id: "regex-matcher", name: "Regex Matcher", icon: "/" },
+    { id: "id-password-generator", name: "ID & Password", icon: "#" },
+  ];
 
   return (
     <div className="sidebar">
@@ -17,11 +21,12 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
         <h2>DevTools Hub</h2>
         <p className="sidebar-subtitle">Client-Side Utilities</p>
       </div>
+
       <nav className="sidebar-nav">
         {tools.map((tool) => (
           <button
             key={tool.id}
-            className={`nav-item ${activeTool === tool.id ? 'active' : ''}`}
+            className={`nav-item ${activeTool === tool.id ? "active" : ""}`}
             onClick={() => onToolSelect(tool.id)}
           >
             <span className="nav-icon">{tool.icon}</span>
@@ -30,8 +35,7 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
         ))}
       </nav>
     </div>
-  )
+  );
 }
 
-export default Sidebar
-
+export default Sidebar;

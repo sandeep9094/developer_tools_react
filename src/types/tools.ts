@@ -4,5 +4,6 @@ export type Tool =
   | "base32-decode"
   | "base64-encode"
   | "base64-decode"
+  | "diff-checker"
   | "regex-matcher"
   | "id-password-generator";

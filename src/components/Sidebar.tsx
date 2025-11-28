@@ -11,6 +11,8 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "json-beautifier", name: "JSON Beautifier", icon: "{ }" },
     { id: "base32-encode", name: "Base32 Encoding", icon: "⇧" },
     { id: "base32-decode", name: "Base32 Decoding", icon: "⇩" },
+    { id: "base64-encode", name: "Base64 Encoding", icon: "⇧" },
+    { id: "base64-decode", name: "Base64 Decoding", icon: "⇩" },
     { id: "regex-matcher", name: "Regex Matcher", icon: "/" },
     { id: "id-password-generator", name: "ID & Password", icon: "#" },
   ];

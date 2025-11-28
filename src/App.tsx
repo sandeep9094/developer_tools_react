@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import Base32Encoding from './components/Base32Encoding'
 import './App.css'
 
@@ -26,20 +28,32 @@ function App() {
     localStorage.setItem('theme', newTheme ? 'dark' : 'light')
   }
 
-  const mode = activeTool === 'base32-encode' ? 'encode' : 'decode'
+  const renderTool = () => {
+    switch (activeTool) {
+      case 'base32-encode':
+        return <Base32Encoding mode="encode" />
+      case 'base32-decode':
+        return <Base32Encoding mode="decode" />
+      default:
+        return (
+          <div className="main-content-placeholder">
+            <h2>Select a tool from the sidebar</h2>
+            <p>Choose a tool to get started</p>
+          </div>
+        )
+    }
+  }
 
   return (
     <div className="app-layout">
       <Sidebar activeTool={activeTool} onToolSelect={setActiveTool} />
-      <div className="main-content">
-        <div className="top-bar">
-          <h1>Developer Productivity Tools</h1>
-          <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
-            {isDarkMode ? '☀️' : '🌙'}
-          </button>
+      <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
+      <main className="main-content">
+        <div className="tool-container">
+          {renderTool()}
         </div>
-        <Base32Encoding mode={mode} />
-      </div>
+      </main>
+      <Footer />
     </div>
   )
 }

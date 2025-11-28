@@ -2,6 +2,7 @@
   padding: 2rem;
   flex: 1;
   background-color: #f9fafb;
+  min-height: 100%;
 }
 
 .dark .encoding-container {

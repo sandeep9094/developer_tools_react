@@ -14,6 +14,7 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "base64-encode", name: "Base64 Encoding", icon: "⇧" },
     { id: "base64-decode", name: "Base64 Decoding", icon: "⇩" },
     { id: "diff-checker", name: "Difference Checker", icon: "⇄" },
+    { id: "lorem-ipsum-generator", name: "Lorem Ipsum Generator", icon: "📝" },
     { id: "regex-matcher", name: "Regex Matcher", icon: "/" },
     { id: "id-password-generator", name: "ID & Password", icon: "#" },
   ];

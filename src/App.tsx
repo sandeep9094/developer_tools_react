@@ -6,6 +6,7 @@ import Base32Encoding from "./components/Base32Encoding";
 import Base64Encoding from "./components/Base64Encoding";
 import DiffChecker from "./components/DiffChecker";
 import LoremIpsumGenerator from "./components/LoremIpsumGenerator";
+import ColorPicker from "./components/ColorPicker";
 import JsonBeautifierPage from "./components/JsonBeautifier";
 import RegexMatcher from "./components/RegexMatcher";
 import IdAndPasswordToolPage from "./components/IdAndPasswordTool";
@@ -57,6 +58,9 @@ function App() {
 
       case "lorem-ipsum-generator":
         return <LoremIpsumGenerator />;
+
+      case "color-picker":
+        return <ColorPicker />;
 
       case "regex-matcher":
         return <RegexMatcher />;

@@ -3,4 +3,7 @@ export type Tool =
   | "base32-encode"
   | "base32-decode"
   | "regex-matcher"
-  | "id-password-generator";
+  | "ulid-uuid-generator"
+  | "id-password-generator"
+  | "json-data-generator"
+  | "hashing-tool";

@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { ulid } from "ulid";
-import { nanoid } from "nanoid";
 import "./IdAndPasswordTool.css";
 
 const IdAndPasswordToolPage: React.FC = () => {
-  const [uuid, setUuid] = useState("");
-  const [ulidValue, setUlidValue] = useState("");
-  const [nanoId, setNanoId] = useState("");
-  const [nanoLength, setNanoLength] = useState(21);
-
   const [password, setPassword] = useState("");
   const [passwordLength, setPasswordLength] = useState(16);
   const [includeUpper, setIncludeUpper] = useState(true);
@@ -20,14 +12,6 @@ const IdAndPasswordToolPage: React.FC = () => {
   const copyToClipboard = (value: string) => {
     if (!value) return;
     navigator.clipboard.writeText(value);
-  };
-
-  const generateUuid = () => setUuid(uuidv4());
-  const generateUlid = () => setUlidValue(ulid());
-
-  const generateNanoId = () => {
-    const len = Math.max(4, nanoLength || 21);
-    setNanoId(nanoid(len));
   };
 
   const generatePassword = () => {
@@ -53,90 +37,29 @@ const IdAndPasswordToolPage: React.FC = () => {
     setPassword(result);
   };
 
+  const clearAll = () => {
+    setPassword("");
+  };
+
   return (
     <div className="idpw-container">
       <div className="idpw-card">
-        <h1 className="idpw-title">ID & Password Generator</h1>
-        <p className="idpw-subtitle">
-          Generate UUIDs, ULIDs, Nano IDs and secure passwords.
-        </p>
-
-        <div className="idpw-grid">
-          {/* UUID */}
-          <div className="idpw-section">
-            <div className="idpw-header-row">
-              <h2 className="idpw-section-title">UUID v4</h2>
-              <div className="idpw-actions">
-                <button className="btn-primary" onClick={generateUuid}>
-                  Generate
-                </button>
-                <button
-                  className="btn-secondary"
-                  disabled={!uuid}
-                  onClick={() => copyToClipboard(uuid)}
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
-            <div className="idpw-output">{uuid || "Click Generate"}</div>
+        <div className="idpw-header">
+          <div>
+            <h1 className="idpw-title">Password Generator</h1>
+            <p className="idpw-subtitle">
+              Generate secure, random passwords with customizable options.
+            </p>
           </div>
+          <button className="idpw-btn-reset" onClick={clearAll}>
+            Clear
+          </button>
+        </div>
 
-          {/* ULID */}
+        <div className="idpw-main-section">
           <div className="idpw-section">
             <div className="idpw-header-row">
-              <h2 className="idpw-section-title">ULID</h2>
-              <div className="idpw-actions">
-                <button className="btn-primary" onClick={generateUlid}>
-                  Generate
-                </button>
-                <button
-                  className="btn-secondary"
-                  disabled={!ulidValue}
-                  onClick={() => copyToClipboard(ulidValue)}
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
-            <div className="idpw-output">
-              {ulidValue || "Click Generate"}
-            </div>
-          </div>
-
-          {/* NANO ID */}
-          <div className="idpw-section">
-            <div className="idpw-header-row">
-              <h2 className="idpw-section-title">Nano ID</h2>
-              <div className="idpw-actions">
-                <input
-                  type="number"
-                  min={4}
-                  value={nanoLength}
-                  onChange={(e) => setNanoLength(parseInt(e.target.value, 10))}
-                  className="idpw-input-small"
-                />
-                <button className="btn-primary" onClick={generateNanoId}>
-                  Generate
-                </button>
-                <button
-                  className="btn-secondary"
-                  disabled={!nanoId}
-                  onClick={() => copyToClipboard(nanoId)}
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
-            <div className="idpw-output">
-              {nanoId || "Set length & click Generate"}
-            </div>
-          </div>
-
-          {/* PASSWORD GENERATOR */}
-          <div className="idpw-section">
-            <div className="idpw-header-row">
-              <h2 className="idpw-section-title">Password Generator</h2>
+              <h2 className="idpw-section-title">Generated Password</h2>
               <div className="idpw-actions">
                 <button className="btn-green" onClick={generatePassword}>
                   Generate

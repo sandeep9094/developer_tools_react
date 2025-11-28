@@ -228,24 +228,20 @@
   flex-direction: column;
 }
 
-.hashing-output-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
 .hashing-btn-copy {
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  font-size: 0.9rem;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 0.85rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
 }
 
 .hashing-btn-copy:hover:not(:disabled) {
@@ -262,6 +258,7 @@
 .hashing-textarea {
   width: 100%;
   padding: 1.25rem;
+  padding-right: 5rem;
   font-size: 1rem;
   font-family: 'Courier New', monospace;
   border-radius: 10px;
@@ -299,6 +296,11 @@
 
 .dark .hashing-textarea[readonly] {
   background-color: #0f172a;
+}
+
+.hashing-textarea-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 /* STATUS */

@@ -13,4 +13,7 @@ export default defineConfig({
       buffer: 'buffer',
     },
   },
+  optimizeDeps: {
+    include: ['uuid'],
+  },
 })

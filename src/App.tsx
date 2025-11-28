@@ -3,6 +3,8 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Base32Encoding from "./components/Base32Encoding";
+import Base64Encoding from "./components/Base64Encoding";
+import DiffChecker from "./components/DiffChecker";
 import JsonBeautifierPage from "./components/JsonBeautifier";
 import RegexMatcher from "./components/RegexMatcher";
 import UlidUuidGenerator from "./components/UlidUuidGenerator";
@@ -46,6 +48,15 @@ function App() {
 
       case "base32-decode":
         return <Base32Encoding mode="decode" />;
+
+      case "base64-encode":
+        return <Base64Encoding mode="encode" />;
+
+      case "base64-decode":
+        return <Base64Encoding mode="decode" />;
+
+      case "diff-checker":
+        return <DiffChecker />;
 
       case "regex-matcher":
         return <RegexMatcher />;

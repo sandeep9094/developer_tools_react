@@ -12,4 +12,7 @@ export type Tool =
   | "id-password-generator"
   | "json-data-generator"
   | "hashing-tool"
-  | "json-schema-validator";
+  | "json-schema-validator"
+  | "jwt-decoder"
+  | "qr-generator"
+  | "cli-command-breaks";

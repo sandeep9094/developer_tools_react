@@ -1,0 +1,367 @@
+.cli-command-breaks-container {
+  padding: 2rem;
+  flex: 1;
+  background-color: #f9fafb;
+  min-height: 100%;
+  position: relative;
+}
+
+.dark .cli-command-breaks-container {
+  background-color: #111827;
+}
+
+.cli-command-breaks-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dark .cli-command-breaks-card {
+  background: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cli-command-breaks-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2rem 0;
+}
+
+.dark .cli-command-breaks-title {
+  color: #f9fafb;
+}
+
+.cli-section {
+  margin-bottom: 2rem;
+}
+
+.cli-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.cli-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.cli-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: -2px;
+}
+
+.cli-tab:hover {
+  color: #374151;
+}
+
+.cli-tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.dark .cli-tab {
+  color: #9ca3af;
+}
+
+.dark .cli-tab:hover {
+  color: #d1d5db;
+}
+
+.dark .cli-tab.active {
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
+}
+
+.cli-section-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cli-icon-btn {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.375rem 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+}
+
+.cli-icon-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.cli-icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark .cli-icon-btn {
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.dark .cli-icon-btn:hover {
+  background-color: #374151;
+  border-color: #6b7280;
+}
+
+.cli-section-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.dark .cli-section-label {
+  color: #d1d5db;
+}
+
+.cli-textarea-container {
+  position: relative;
+  display: flex;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.dark .cli-textarea-container {
+  background-color: #1f2937;
+  border-color: #4b5563;
+}
+
+.cli-line-numbers {
+  background-color: #f9fafb;
+  color: #6b7280;
+  padding: 1rem 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #e5e7eb;
+  min-width: 40px;
+}
+
+.dark .cli-line-numbers {
+  background-color: #111827;
+  color: #9ca3af;
+  border-right-color: #374151;
+}
+
+.cli-line-number {
+  min-height: 1.6em;
+}
+
+.cli-textarea {
+  flex: 1;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #111827;
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.cli-textarea:focus {
+  outline: none;
+}
+
+.dark .cli-textarea {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.cli-controls-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.dark .cli-controls-section {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+.cli-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cli-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+.dark .cli-checkbox-label {
+  color: #d1d5db;
+}
+
+.cli-checkbox {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.cli-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cli-btn-outline {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cli-btn-outline:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.cli-btn-outline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark .cli-btn-outline {
+  background: #1f2937;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.dark .cli-btn-outline:hover:not(:disabled) {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.cli-delimiter-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cli-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.dark .cli-label {
+  color: #d1d5db;
+}
+
+.cli-delimiter-input {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #111827;
+  font-family: 'Courier New', monospace;
+  width: 100px;
+}
+
+.cli-delimiter-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dark .cli-delimiter-input {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-color: #4b5563;
+}
+
+.dark .cli-delimiter-input:focus {
+  border-color: #60a5fa;
+}
+
+.cli-toast {
+  position: fixed;
+  top: 100px;
+  right: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #111827;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 0.875rem;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+}
+
+.dark .cli-toast {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cli-command-breaks-container {
+    padding: 1rem;
+  }
+
+  .cli-command-breaks-card {
+    padding: 1rem;
+  }
+
+  .cli-controls-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+

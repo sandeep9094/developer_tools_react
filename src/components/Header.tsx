@@ -19,4 +19,3 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
 }
 
 export default Header
-

@@ -5,6 +5,8 @@ export type Tool =
   | "base64-encode"
   | "base64-decode"
   | "diff-checker"
+  | "lorem-ipsum-generator"
+  | "color-picker"
   | "regex-matcher"
   | "ulid-uuid-generator"
   | "id-password-generator"

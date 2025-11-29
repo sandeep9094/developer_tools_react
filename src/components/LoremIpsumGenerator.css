@@ -1,0 +1,348 @@
+.lorem-container {
+  padding: 2rem;
+  flex: 1;
+  background-color: #f9fafb;
+  min-height: 100%;
+}
+
+.dark .lorem-container {
+  background-color: #111827;
+}
+
+.lorem-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 1400px;
+}
+
+.dark .lorem-card {
+  background: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.lorem-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.dark .lorem-title {
+  color: #f9fafb;
+}
+
+.lorem-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.dark .lorem-controls {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+.lorem-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lorem-input-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.lorem-number-input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #111827;
+  text-align: center;
+}
+
+.lorem-number-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dark .lorem-number-input {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.dark .lorem-number-input:focus {
+  border-color: #60a5fa;
+}
+
+.lorem-type-select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #111827;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.lorem-type-select:hover {
+  border-color: #d1d5db;
+}
+
+.lorem-type-select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dark .lorem-type-select {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.dark .lorem-type-select:hover {
+  border-color: #4b5563;
+}
+
+.dark .lorem-type-select:focus {
+  border-color: #60a5fa;
+}
+
+.lorem-words-control {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lorem-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.dark .lorem-label {
+  color: #d1d5db;
+}
+
+.lorem-words-input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #111827;
+  text-align: center;
+}
+
+.lorem-words-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dark .lorem-words-input {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.dark .lorem-words-input:focus {
+  border-color: #60a5fa;
+}
+
+.lorem-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lorem-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.lorem-checkbox-text {
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.dark .lorem-checkbox-text {
+  color: #d1d5db;
+}
+
+.lorem-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.lorem-regenerate-button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.lorem-regenerate-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+.lorem-regenerate-button:active {
+  transform: translateY(0);
+}
+
+.lorem-output-section {
+  margin-top: 2rem;
+}
+
+.lorem-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.lorem-output-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.dark .lorem-output-title {
+  color: #f9fafb;
+}
+
+.lorem-output-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.lorem-copy-button,
+.lorem-clear-button {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lorem-copy-button:hover:not(:disabled),
+.lorem-clear-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.lorem-copy-button:disabled,
+.lorem-clear-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark .lorem-copy-button,
+.dark .lorem-clear-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .lorem-copy-button:hover:not(:disabled),
+.dark .lorem-clear-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
+}
+
+.lorem-output-textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+  color: #111827;
+  line-height: 1.8;
+  transition: border-color 0.2s ease;
+}
+
+.lorem-output-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+.lorem-output-textarea[readonly] {
+  background-color: #f3f4f6;
+  cursor: default;
+}
+
+.dark .lorem-output-textarea {
+  background-color: #111827;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.dark .lorem-output-textarea:focus {
+  border-color: #60a5fa;
+  background-color: #1f2937;
+}
+
+.dark .lorem-output-textarea[readonly] {
+  background-color: #111827;
+}
+
+@media (max-width: 768px) {
+  .lorem-input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lorem-words-control {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lorem-output-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+

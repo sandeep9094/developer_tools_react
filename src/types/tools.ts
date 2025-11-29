@@ -1,5 +1,6 @@
 export type Tool =
   | "json-beautifier"
+  | "base-encoding"
   | "base32-encode"
   | "base32-decode"
   | "base64-encode"
@@ -16,3 +17,5 @@ export type Tool =
   | "jwt-decoder"
   | "qr-generator"
   | "cli-command-breaks";
+
+export type BaseEncodingMode = "base32-encode" | "base32-decode" | "base64-encode" | "base64-decode";

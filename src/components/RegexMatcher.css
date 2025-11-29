@@ -64,21 +64,21 @@
 }
 
 .regex-preset-btn {
-  padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
 }
 
 .regex-preset-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
 }
 
 /* ================================
@@ -148,7 +148,7 @@
 .regex-textarea {
   padding: 1.25rem;
   font-size: 1rem;
-  height: 250px;
+  min-height: 400px;
   border-radius: 10px;
   border: 2px solid #e5e7eb;
   background: #f8fafc;
@@ -157,10 +157,11 @@
   resize: vertical;
   line-height: 1.7;
   transition: border-color 0.2s ease;
+  box-sizing: border-box;
 }
 
 .large-textarea {
-  height: 350px;
+  min-height: 400px;
 }
 
 .dark .regex-textarea {

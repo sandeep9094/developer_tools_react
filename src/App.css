@@ -62,3 +62,48 @@
 .dark .main-content-placeholder p {
   color: #9ca3af;
 }
+
+/* Themed Scrollbar Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark mode scrollbar */
+.dark * {
+  scrollbar-color: #475569 #1e293b;
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: #1e293b;
+  border: 2px solid #1e293b;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background: #475569;
+  border: 2px solid #1e293b;
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

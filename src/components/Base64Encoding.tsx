@@ -317,8 +317,7 @@ function Base64Encoding({ mode }: Base64EncodingProps) {
             </button>
           )}
           <button className="copy-button" onClick={handleCopy} disabled={!output}>
-            <span className="button-icon">📋</span>
-            Copy Output
+            📋 Copy
           </button>
         </div>
 

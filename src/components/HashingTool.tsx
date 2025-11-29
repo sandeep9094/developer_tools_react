@@ -175,39 +175,39 @@ const HashingTool: React.FC = () => {
 
         <div className="hashing-grid">
           <div className="hashing-section">
-            <label htmlFor="input" className="hashing-label">Input Text</label>
-            <div className="hashing-textarea-wrapper">
-              <textarea
-                id="input"
-                className="hashing-textarea"
-                value={input}
-                onChange={handleInputChange}
-                placeholder="Enter text to hash..."
-                rows={12}
-              />
+            <div className="hashing-input-header">
+              <label htmlFor="input" className="hashing-label">Input Text</label>
             </div>
+            <textarea
+              id="input"
+              className="hashing-textarea"
+              value={input}
+              onChange={handleInputChange}
+              placeholder="Enter text to hash..."
+              rows={12}
+            />
           </div>
 
           <div className="hashing-section">
-            <label htmlFor="output" className="hashing-label">Hash Output</label>
-            <div className="hashing-textarea-wrapper">
-              <textarea
-                id="output"
-                className="hashing-textarea"
-                value={output}
-                readOnly
-                placeholder="Hash will appear here..."
-                rows={12}
-              />
+            <div className="hashing-output-header">
+              <label htmlFor="output" className="hashing-label">Hash Output</label>
               <button
-                className="hashing-btn-copy"
+                className="copy-button"
                 disabled={!output}
                 onClick={copyOutput}
-                aria-label="Copy hash output"
+                title="Copy hash output"
               >
-                Copy
+                📋 Copy
               </button>
             </div>
+            <textarea
+              id="output"
+              className="hashing-textarea"
+              value={output}
+              readOnly
+              placeholder="Hash will appear here..."
+              rows={12}
+            />
             {isHashing && (
               <div className="hashing-status">Generating hash...</div>
             )}

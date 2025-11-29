@@ -64,7 +64,7 @@
 
 .hashing-btn-primary,
 .hashing-btn-secondary {
-  padding: 0.85rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
@@ -75,7 +75,7 @@
 
 .hashing-btn-primary {
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  color: #ffffff;
+  color: white;
   box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
 }
 
@@ -91,23 +91,23 @@
 
 .hashing-btn-secondary {
   background: #ffffff;
-  border: 2px solid #e5e7eb;
   color: #374151;
+  border: 2px solid #e5e7eb;
 }
 
 .hashing-btn-secondary:hover {
-  background: #f1f5f9;
+  background-color: #f1f5f9;
   border-color: #d1d5db;
 }
 
 .dark .hashing-btn-secondary {
   background: #334155;
-  border-color: #475569;
   color: #e2e8f0;
+  border-color: #475569;
 }
 
 .dark .hashing-btn-secondary:hover {
-  background: #475569;
+  background-color: #475569;
   border-color: #64748b;
 }
 
@@ -133,6 +133,8 @@
   font-weight: 600;
   color: #374151;
   letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  padding-top: 0;
 }
 
 .dark .hashing-label {
@@ -228,48 +230,73 @@
   flex-direction: column;
 }
 
-.hashing-btn-copy {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 0.45rem 1rem;
-  border-radius: 999px;
-  background: #10b981;
-  color: #ffffff;
+.hashing-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 1.5rem;
+}
+
+.hashing-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 1.5rem;
+}
+
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   font-size: 0.85rem;
-  font-weight: 600;
-  border: none;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.hashing-btn-copy:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
 }
 
-.hashing-btn-copy:disabled {
+.copy-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
 }
 
 /* TEXTAREA */
 .hashing-textarea {
   width: 100%;
   padding: 1.25rem;
-  padding-right: 5rem;
   font-size: 1rem;
   font-family: 'Courier New', monospace;
   border-radius: 10px;
   border: 2px solid #e5e7eb;
   background-color: #f8fafc;
   color: #111827;
-  resize: none;
+  resize: vertical;
   line-height: 1.7;
   transition: border-color 0.2s ease;
   box-sizing: border-box;
-  min-height: 280px;
+  min-height: 400px;
 }
 
 .hashing-textarea:focus {
@@ -298,10 +325,6 @@
   background-color: #0f172a;
 }
 
-.hashing-textarea-wrapper {
-  position: relative;
-  width: 100%;
-}
 
 /* STATUS */
 .hashing-status {

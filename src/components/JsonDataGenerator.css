@@ -64,7 +64,7 @@
 
 /* BUTTONS */
 .json-gen-btn {
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
@@ -91,7 +91,7 @@
 }
 
 .json-gen-btn-reset:hover {
-  background: #f1f5f9;
+  background-color: #f1f5f9;
   border-color: #d1d5db;
 }
 
@@ -102,31 +102,44 @@
 }
 
 .dark .json-gen-btn-reset:hover {
-  background: #475569;
+  background-color: #475569;
   border-color: #64748b;
 }
 
-.json-gen-btn-copy {
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: none;
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.json-gen-btn-copy:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
 }
 
-.json-gen-btn-copy:disabled {
+.copy-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
 }
 
 .json-gen-btn-export {
@@ -183,17 +196,22 @@
 }
 
 .json-gen-btn-remove {
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem;
   background: #fee2e2;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   color: #dc2626;
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   line-height: 1;
-  min-width: 32px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .json-gen-btn-remove:hover {
@@ -297,13 +315,17 @@
 
 .json-gen-field-row {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 0.8fr 0.8fr auto;
+  grid-template-columns: 1.5fr 1.5fr 0.8fr 0.8fr 36px;
   gap: 0.5rem;
   align-items: center;
   padding: 0.75rem;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
+}
+
+.json-gen-empty-cell {
+  /* Empty placeholder cell to maintain grid alignment */
 }
 
 .dark .json-gen-field-row {

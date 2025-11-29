@@ -152,6 +152,7 @@
   color: #111827;
   line-height: 1.7;
   transition: border-color 0.2s ease;
+  min-height: 400px;
 }
 
 .io-textarea:focus {
@@ -187,10 +188,7 @@
 }
 
 .encode-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   border: none;
@@ -211,12 +209,8 @@
   transform: translateY(0);
 }
 
-.decode-button,
-.copy-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.6rem;
+.decode-button {
+  padding: 0.75rem 1.5rem;
   background: #ffffff;
   color: #374151;
   border: 2px solid #e5e7eb;
@@ -227,15 +221,33 @@
   transition: all 0.2s ease;
 }
 
-.decode-button:hover:not(:disabled),
-.copy-button:hover:not(:disabled) {
+.decode-button:hover:not(:disabled) {
   background-color: #f1f5f9;
   border-color: #d1d5db;
 }
 
-.decode-button:active:not(:disabled),
-.copy-button:active:not(:disabled) {
+.decode-button:active:not(:disabled) {
   background-color: #f3f4f6;
+}
+
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
 }
 
 .copy-button:disabled {
@@ -243,17 +255,26 @@
   cursor: not-allowed;
 }
 
-.dark .decode-button,
-.dark .copy-button {
+.dark .decode-button {
   background: #334155;
   color: #e2e8f0;
   border-color: #475569;
 }
 
-.dark .decode-button:hover:not(:disabled),
-.dark .copy-button:hover:not(:disabled) {
+.dark .decode-button:hover:not(:disabled) {
   background-color: #475569;
   border-color: #64748b;
+}
+
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
 }
 
 .button-icon {

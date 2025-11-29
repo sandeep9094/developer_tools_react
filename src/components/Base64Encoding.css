@@ -1,33 +1,36 @@
 .encoding-container {
-  padding: 2rem;
+  padding: 3rem;
   flex: 1;
-  background-color: #f9fafb;
+  background-color: #f3f4f6;
   min-height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .dark .encoding-container {
-  background-color: #111827;
+  background-color: #0f172a;
 }
 
 .encoding-card {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  max-width: 1400px;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 1600px;
+  width: 100%;
 }
 
 .encoding-title {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #111827;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.25rem 0;
 }
 
 .encoding-subtitle {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #6b7280;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
 }
 
@@ -129,14 +132,11 @@
 }
 
 .encode-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -145,7 +145,7 @@
 }
 
 .encode-button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
 }
 
@@ -153,31 +153,45 @@
   transform: translateY(0);
 }
 
-.decode-button,
-.copy-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.decode-button {
   padding: 0.75rem 1.5rem;
   background: #ffffff;
   color: #374151;
   border: 2px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.decode-button:hover:not(:disabled),
-.copy-button:hover:not(:disabled) {
-  background-color: #f9fafb;
+.decode-button:hover:not(:disabled) {
+  background-color: #f1f5f9;
   border-color: #d1d5db;
 }
 
-.decode-button:active:not(:disabled),
-.copy-button:active:not(:disabled) {
+.decode-button:active:not(:disabled) {
   background-color: #f3f4f6;
+}
+
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
 }
 
 .copy-button:disabled {
@@ -265,17 +279,26 @@
   background-color: #111827;
 }
 
-.dark .decode-button,
-.dark .copy-button {
-  background: #1f2937;
-  color: #d1d5db;
-  border-color: #374151;
+.dark .decode-button {
+  background: #334155;
+  color: #e2e8f0;
+  border-color: #475569;
 }
 
-.dark .decode-button:hover:not(:disabled),
-.dark .copy-button:hover:not(:disabled) {
+.dark .decode-button:hover:not(:disabled) {
+  background-color: #475569;
+  border-color: #64748b;
+}
+
+.dark .copy-button {
   background-color: #374151;
+  color: #d1d5db;
   border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
 }
 
 .dark .error-message {

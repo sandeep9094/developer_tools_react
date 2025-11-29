@@ -97,11 +97,12 @@ const JsonBeautifier: React.FC = () => {
             <div className="json-output-header">
               <label className="json-label">Formatted Output</label>
               <button
-                className="json-btn-copy"
+                className="copy-button"
                 disabled={!output}
                 onClick={copyOutput}
+                title="Copy formatted JSON"
               >
-                Copy
+                📋 Copy
               </button>
             </div>
 

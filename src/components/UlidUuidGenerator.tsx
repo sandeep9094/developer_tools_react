@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4, v6 as uuidv6 } from "uuid";
 import { ulid } from "ulid";
 import { nanoid } from "nanoid";
 import "./UlidUuidGenerator.css";
 
 const UlidUuidGenerator: React.FC = () => {
   const [uuid, setUuid] = useState("");
+  const [uuidVersion, setUuidVersion] = useState<"v4" | "v6">("v4");
   const [ulidValue, setUlidValue] = useState("");
   const [nanoId, setNanoId] = useState("");
   const [nanoLength, setNanoLength] = useState(21);
@@ -15,7 +16,13 @@ const UlidUuidGenerator: React.FC = () => {
     navigator.clipboard.writeText(value);
   };
 
-  const generateUuid = () => setUuid(uuidv4());
+  const generateUuid = () => {
+    if (uuidVersion === "v6") {
+      setUuid(uuidv6());
+    } else {
+      setUuid(uuidv4());
+    }
+  };
   const generateUlid = () => setUlidValue(ulid());
 
   const generateNanoId = () => {
@@ -48,24 +55,33 @@ const UlidUuidGenerator: React.FC = () => {
           {/* UUID */}
           <div className="ulid-uuid-section">
             <div className="ulid-uuid-section-header">
-              <h2 className="ulid-uuid-section-title">UUID v4</h2>
+              <h2 className="ulid-uuid-section-title">UUID</h2>
             </div>
             <div className="ulid-uuid-actions-container">
               <div className="ulid-uuid-actions">
+                <select
+                  value={uuidVersion}
+                  onChange={(e) => setUuidVersion(e.target.value as "v4" | "v6")}
+                  className="ulid-uuid-select"
+                >
+                  <option value="v4">v4</option>
+                  <option value="v6">v6</option>
+                </select>
                 <button className="ulid-uuid-btn-primary" onClick={generateUuid}>
                   Generate
                 </button>
                 <button
-                  className="ulid-uuid-btn-secondary"
+                  className="copy-button"
                   disabled={!uuid}
                   onClick={() => copyToClipboard(uuid)}
+                  title="Copy UUID"
                 >
-                  Copy
+                  📋 Copy
                 </button>
               </div>
             </div>
             <div className="ulid-uuid-output">
-              {uuid || "Click Generate to create a UUID"}
+              {uuid || `Click Generate to create a UUID ${uuidVersion}`}
             </div>
           </div>
 
@@ -80,11 +96,12 @@ const UlidUuidGenerator: React.FC = () => {
                   Generate
                 </button>
                 <button
-                  className="ulid-uuid-btn-secondary"
+                  className="copy-button"
                   disabled={!ulidValue}
                   onClick={() => copyToClipboard(ulidValue)}
+                  title="Copy ULID"
                 >
-                  Copy
+                  📋 Copy
                 </button>
               </div>
             </div>
@@ -112,11 +129,12 @@ const UlidUuidGenerator: React.FC = () => {
                   Generate
                 </button>
                 <button
-                  className="ulid-uuid-btn-secondary"
+                  className="copy-button"
                   disabled={!nanoId}
                   onClick={() => copyToClipboard(nanoId)}
+                  title="Copy Nano ID"
                 >
-                  Copy
+                  📋 Copy
                 </button>
               </div>
             </div>

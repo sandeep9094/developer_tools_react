@@ -64,7 +64,7 @@
 }
 
 .json-btn {
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
@@ -74,12 +74,14 @@
 }
 
 .json-btn-format {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
 }
 
 .json-btn-format:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
 }
 
 .json-btn-reset {
@@ -89,13 +91,19 @@
 }
 
 .json-btn-reset:hover {
-  background: #f1f5f9;
+  background-color: #f1f5f9;
+  border-color: #d1d5db;
 }
 
 .dark .json-btn-reset {
   background: #334155;
   border-color: #475569;
   color: #e2e8f0;
+}
+
+.dark .json-btn-reset:hover {
+  background-color: #475569;
+  border-color: #64748b;
 }
 
 /* GRID */
@@ -137,6 +145,7 @@
   line-height: 1.7;
   transition: border-color 0.2s ease;
   box-sizing: border-box;
+  min-height: 400px;
 }
 
 .large-textarea {
@@ -167,27 +176,40 @@
 }
 
 /* COPY BUTTON */
-.json-btn-copy {
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: none;
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.json-btn-copy:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
 }
 
-.json-btn-copy:disabled {
+.copy-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
 }
 
 /* STATUS BAR */

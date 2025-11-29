@@ -137,37 +137,40 @@
   box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
 }
 
-.ulid-uuid-btn-secondary {
-  padding: 0.8rem 1.6rem;
-  background: #ffffff;
-  border-radius: 10px;
-  border: 2px solid #e5e7eb;
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
   color: #374151;
-  font-size: 1rem;
-  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.ulid-uuid-btn-secondary:hover:not(:disabled) {
-  background: #f1f5f9;
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
   border-color: #d1d5db;
 }
 
-.ulid-uuid-btn-secondary:disabled {
+.copy-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.dark .ulid-uuid-btn-secondary {
-  background: #334155;
-  color: #e2e8f0;
-  border-color: #475569;
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
 }
 
-.dark .ulid-uuid-btn-secondary:hover:not(:disabled) {
-  background: #475569;
-  border-color: #64748b;
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
 }
 
 .ulid-uuid-btn-reset {
@@ -248,6 +251,37 @@
 }
 
 .dark .ulid-uuid-input-small:focus {
+  border-color: #3b82f6;
+  background: #1e293b;
+}
+
+/* SELECT DROPDOWN */
+.ulid-uuid-select {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 2px solid #e5e7eb;
+  font-size: 1rem;
+  color: #111827;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.ulid-uuid-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff;
+}
+
+.dark .ulid-uuid-select {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark .ulid-uuid-select:focus {
   border-color: #3b82f6;
   background: #1e293b;
 }

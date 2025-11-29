@@ -250,7 +250,7 @@ const JsonDataGenerator: React.FC = () => {
                     <option value="array">Array</option>
                     <option value="object">Object</option>
                   </select>
-                  {(field.type === "string" || field.type === "number" || field.type === "lorem" || field.type === "array") && (
+                  {(field.type === "string" || field.type === "number" || field.type === "lorem" || field.type === "array") ? (
                     <>
                       <input
                         type="number"
@@ -266,6 +266,11 @@ const JsonDataGenerator: React.FC = () => {
                         onChange={(e) => updateField(field.id, { max: parseInt(e.target.value) || undefined })}
                         className="json-gen-input-minmax"
                       />
+                    </>
+                  ) : (
+                    <>
+                      <div className="json-gen-empty-cell"></div>
+                      <div className="json-gen-empty-cell"></div>
                     </>
                   )}
                   <button
@@ -290,11 +295,12 @@ const JsonDataGenerator: React.FC = () => {
               <label className="json-gen-label">Generated JSON</label>
               <div className="json-gen-output-actions">
                 <button
-                  className="json-gen-btn-copy"
+                  className="copy-button"
                   disabled={!output}
                   onClick={copyOutput}
+                  title="Copy generated JSON"
                 >
-                  Copy
+                  📋 Copy
                 </button>
                 <button
                   className="json-gen-btn-export"

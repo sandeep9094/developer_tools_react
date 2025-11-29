@@ -65,11 +65,12 @@ const IdAndPasswordToolPage: React.FC = () => {
                   Generate
                 </button>
                 <button
-                  className="btn-secondary"
+                  className="copy-button"
                   disabled={!password}
                   onClick={() => copyToClipboard(password)}
+                  title="Copy password"
                 >
-                  Copy
+                  📋 Copy
                 </button>
               </div>
             </div>

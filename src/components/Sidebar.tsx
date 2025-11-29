@@ -16,6 +16,7 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "lorem-ipsum-generator", name: "Lorem Ipsum Generator", icon: "📝" },
     { id: "hashing-tool", name: "Hash Generator", icon: "◉" },
     { id: "jwt-decoder", name: "JWT Token Encoder and Decoder", icon: "🔐" },
+    { id: "qr-generator", name: "QR Generator", icon: "📱" },
     { id: "color-picker", name: "Color Picker", icon: "🎨" },
     { id: "ulid-uuid-generator", name: "UUID Generator", icon: "⚡" },
     { id: "base32-encode", name: "Base32 Encoding", icon: "⇧" },

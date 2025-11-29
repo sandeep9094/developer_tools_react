@@ -15,6 +15,7 @@ import JsonDataGenerator from "./components/JsonDataGenerator";
 import HashingTool from "./components/HashingTool";
 import JsonSchemaValidator from "./components/JsonSchemaValidator";
 import JwtDecoder from "./components/JwtDecoder";
+import QrGenerator from "./components/QrGenerator";
 import type { Tool } from "./types/tools";
 
 import "./App.css";
@@ -84,6 +85,9 @@ function App() {
 
       case "jwt-decoder":
         return <JwtDecoder />;
+
+      case "qr-generator":
+        return <QrGenerator />;
 
       case "json-schema-validator":
         return <JsonSchemaValidator />;

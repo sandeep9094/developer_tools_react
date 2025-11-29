@@ -13,4 +13,5 @@ export type Tool =
   | "json-data-generator"
   | "hashing-tool"
   | "json-schema-validator"
-  | "jwt-decoder";
+  | "jwt-decoder"
+  | "qr-generator";

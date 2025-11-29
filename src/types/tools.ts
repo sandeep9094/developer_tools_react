@@ -14,4 +14,5 @@ export type Tool =
   | "hashing-tool"
   | "json-schema-validator"
   | "jwt-decoder"
-  | "qr-generator";
+  | "qr-generator"
+  | "cli-command-breaks";

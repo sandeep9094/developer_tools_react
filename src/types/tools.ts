@@ -8,4 +8,8 @@ export type Tool =
   | "lorem-ipsum-generator"
   | "color-picker"
   | "regex-matcher"
-  | "id-password-generator";
+  | "ulid-uuid-generator"
+  | "id-password-generator"
+  | "json-data-generator"
+  | "hashing-tool"
+  | "json-schema-validator";

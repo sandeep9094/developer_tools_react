@@ -16,10 +16,10 @@
 .json-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 2.5rem 3rem;
+  padding: 3rem;
   width: 100%;
   max-width: 1600px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .dark .json-card {
@@ -40,7 +40,7 @@
   font-size: 2rem;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem 0;
 }
 
 .dark .json-title {
@@ -50,6 +50,7 @@
 .json-subtitle {
   color: #6b7280;
   font-size: 1.05rem;
+  margin: 0;
 }
 
 .dark .json-subtitle {
@@ -127,13 +128,15 @@
   width: 100%;
   padding: 1.25rem;
   font-size: 1rem;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   border-radius: 10px;
   border: 2px solid #e5e7eb;
   background-color: #f8fafc;
   color: #111827;
   resize: vertical;
   line-height: 1.7;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
 }
 
 .large-textarea {
@@ -166,17 +169,20 @@
 /* COPY BUTTON */
 .json-btn-copy {
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  background: #10b981;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
 }
 
 .json-btn-copy:hover:not(:disabled) {
-  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
 }
 
 .json-btn-copy:disabled {
@@ -189,7 +195,7 @@
   background: #f1f5f9;
   border-radius: 10px;
   padding: 1rem 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 2px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   font-size: 1rem;

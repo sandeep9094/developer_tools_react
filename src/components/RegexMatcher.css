@@ -29,6 +29,7 @@
 .regex-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -37,6 +38,7 @@
   font-size: 2rem;
   font-weight: 700;
   color: #111827;
+  margin: 0 0 0.25rem 0;
 }
 
 .dark .regex-title {
@@ -46,6 +48,7 @@
 .regex-subtitle {
   color: #6b7280;
   margin-top: 0.25rem;
+  margin-bottom: 0;
   font-size: 1.05rem;
 }
 
@@ -61,18 +64,21 @@
 }
 
 .regex-preset-btn {
-  padding: 0.6rem 1rem;
-  background: #4f46e5;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
   color: white;
   font-size: 0.9rem;
-  border-radius: 8px;
-  font-weight: 500;
+  border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
   border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
 }
 
 .regex-preset-btn:hover {
-  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.4);
 }
 
 /* ================================
@@ -118,7 +124,8 @@
   border: 2px solid #e5e7eb;
   background: #f8fafc;
   color: #111827;
-  font-family: monospace;
+  font-family: 'Courier New', monospace;
+  transition: border-color 0.2s ease;
 }
 
 .regex-input:focus {
@@ -146,9 +153,10 @@
   border: 2px solid #e5e7eb;
   background: #f8fafc;
   color: #111827;
-  font-family: monospace;
+  font-family: 'Courier New', monospace;
   resize: vertical;
-  line-height: 1.6;
+  line-height: 1.7;
+  transition: border-color 0.2s ease;
 }
 
 .large-textarea {
@@ -164,11 +172,12 @@
 /* ERROR MESSAGE */
 .regex-error {
   margin-top: 0.75rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+  padding: 1rem;
+  border-radius: 10px;
   background: #fee2e2;
   color: #dc2626;
   border: 1px solid #fecaca;
+  font-weight: 500;
 }
 
 .dark .regex-error {
@@ -180,7 +189,7 @@
   padding: 1.5rem;
   border-radius: 12px;
   background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  border: 2px solid #e2e8f0;
 }
 
 .dark .regex-results {
@@ -188,10 +197,14 @@
   border-color: #475569;
 }
 
+.dark .regex-results-title {
+  color: #e2e8f0;
+}
+
 .regex-results-title {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   color: #1e293b;
 }
 

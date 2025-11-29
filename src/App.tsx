@@ -9,7 +9,11 @@ import LoremIpsumGenerator from "./components/LoremIpsumGenerator";
 import ColorPicker from "./components/ColorPicker";
 import JsonBeautifierPage from "./components/JsonBeautifier";
 import RegexMatcher from "./components/RegexMatcher";
+import UlidUuidGenerator from "./components/UlidUuidGenerator";
 import IdAndPasswordToolPage from "./components/IdAndPasswordTool";
+import JsonDataGenerator from "./components/JsonDataGenerator";
+import HashingTool from "./components/HashingTool";
+import JsonSchemaValidator from "./components/JsonSchemaValidator";
 import type { Tool } from "./types/tools";
 
 import "./App.css";
@@ -65,8 +69,20 @@ function App() {
       case "regex-matcher":
         return <RegexMatcher />;
 
+      case "ulid-uuid-generator":
+        return <UlidUuidGenerator />;
+
       case "id-password-generator":
         return <IdAndPasswordToolPage />;
+
+      case "json-data-generator":
+        return <JsonDataGenerator />;
+
+      case "hashing-tool":
+        return <HashingTool />;
+
+      case "json-schema-validator":
+        return <JsonSchemaValidator />;
 
       default:
         return (

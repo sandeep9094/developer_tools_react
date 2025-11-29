@@ -17,7 +17,11 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "lorem-ipsum-generator", name: "Lorem Ipsum Generator", icon: "📝" },
     { id: "color-picker", name: "Color Picker", icon: "🎨" },
     { id: "regex-matcher", name: "Regex Matcher", icon: "/" },
-    { id: "id-password-generator", name: "ID & Password", icon: "#" },
+    { id: "ulid-uuid-generator", name: "ULID & UUID", icon: "⚡" },
+    { id: "id-password-generator", name: "Password Generator", icon: "#" },
+    { id: "json-data-generator", name: "JSON Data Generator", icon: "⚙" },
+    { id: "hashing-tool", name: "Hash Generator", icon: "◉" },
+    { id: "json-schema-validator", name: "JSON Schema Validator", icon: "◇" },
   ];
 
   return (

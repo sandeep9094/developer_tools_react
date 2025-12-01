@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Base32Encoding from "./components/Base32Encoding";
 import Base64Encoding from "./components/Base64Encoding";
+import BaseEncodingPage from "./components/BaseEncodingPage";
 import DiffChecker from "./components/DiffChecker";
 import LoremIpsumGenerator from "./components/LoremIpsumGenerator";
 import ColorPicker from "./components/ColorPicker";
@@ -13,6 +14,8 @@ import UlidUuidGenerator from "./components/UlidUuidGenerator";
 import IdAndPasswordToolPage from "./components/IdAndPasswordTool";
 import JsonDataGenerator from "./components/JsonDataGenerator";
 import HashingTool from "./components/HashingTool";
+import AesEncryptionTool from "./components/AesEncryptionTool";
+import RsaEncryptionTool from "./components/RsaEncryptionTool";
 import JsonSchemaValidator from "./components/JsonSchemaValidator";
 import JwtDecoder from "./components/JwtDecoder";
 import QrGenerator from "./components/QrGenerator";
@@ -48,17 +51,16 @@ function App() {
       case "json-beautifier":
         return <JsonBeautifierPage />;
 
-      case "base32-encode":
-        return <Base32Encoding mode="encode" />;
+      case "base-encoding":
+        return <BaseEncodingPage family="both" />;
 
+      case "base32-encode":
       case "base32-decode":
-        return <Base32Encoding mode="decode" />;
+        return <BaseEncodingPage family="base32" />;
 
       case "base64-encode":
-        return <Base64Encoding mode="encode" />;
-
       case "base64-decode":
-        return <Base64Encoding mode="decode" />;
+        return <BaseEncodingPage family="base64" />;
 
       case "diff-checker":
         return <DiffChecker />;
@@ -83,6 +85,12 @@ function App() {
 
       case "hashing-tool":
         return <HashingTool />;
+
+      case "aes-encryption-tool":
+        return <AesEncryptionTool />;
+
+      case "rsa-encryption-tool":
+        return <RsaEncryptionTool />;
 
       case "jwt-decoder":
         return <JwtDecoder />;

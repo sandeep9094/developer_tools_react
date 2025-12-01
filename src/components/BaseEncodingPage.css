@@ -1,0 +1,69 @@
+.base-encoding-page {
+  padding: 3rem;
+  flex: 1;
+}
+
+.base-encoding-page-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.base-encoding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.base-encoding-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.dark .base-encoding-title {
+  color: #f8fafc;
+}
+
+.base-encoding-subtitle {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.dark .base-encoding-subtitle {
+  color: #94a3b8;
+}
+
+.base-encoding-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Make nested encoding cards stack nicely without full-page spacing */
+.base-encoding-page .encoding-container {
+  padding: 0;
+  min-height: auto;
+  background: transparent;
+  display: block;
+}
+
+.dark .base-encoding-page .encoding-container {
+  background: transparent;
+}
+
+.base-encoding-page .encoding-card {
+  padding: 2.25rem;
+  margin: 0;
+}
+
+.base-encoding-page .encoding-card + .encoding-card {
+  margin-top: 0;
+}
+
+

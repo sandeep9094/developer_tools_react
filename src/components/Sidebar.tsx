@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Sidebar.css'
-import type { Tool, BaseEncodingMode } from '../types/tools'
+import type { Tool } from '../types/tools'
 
 interface SidebarProps {
   activeTool: Tool
@@ -8,20 +8,7 @@ interface SidebarProps {
 }
 
 function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
-  const isBaseEncodingActive = 
-    activeTool === "base32-encode" || 
-    activeTool === "base32-decode" || 
-    activeTool === "base64-encode" || 
-    activeTool === "base64-decode";
-  
-  const [baseEncodingExpanded, setBaseEncodingExpanded] = useState(isBaseEncodingActive);
-  
-  // Auto-expand when a base encoding tool becomes active
-  useEffect(() => {
-    if (isBaseEncodingActive) {
-      setBaseEncodingExpanded(true);
-    }
-  }, [isBaseEncodingActive]);
+  const [baseEncodingExpanded, setBaseEncodingExpanded] = useState(false);
 
   const tools: { id: Tool; name: string; icon: string }[] = [
     { id: "json-data-generator", name: "JSON Data Generator", icon: "⚙" },
@@ -31,6 +18,8 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "json-schema-validator", name: "JSON Schema Validator", icon: "◇" },
     { id: "lorem-ipsum-generator", name: "Lorem Ipsum Generator", icon: "📝" },
     { id: "hashing-tool", name: "Hash Generator", icon: "◉" },
+    { id: "aes-encryption-tool", name: "AES Encryption", icon: "◆" },
+    { id: "rsa-encryption-tool", name: "RSA Encryption", icon: "◇" },
     { id: "regex-matcher", name: "Regex Matcher", icon: "🔍" },
     { id: "jwt-decoder", name: "JWT Token Encoder and Decoder", icon: "🔐" },
     { id: "qr-generator", name: "QR Generator", icon: "📱" },
@@ -39,18 +28,10 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
     { id: "ulid-uuid-generator", name: "UUID Generator", icon: "⚡" },
   ];
 
-  const baseEncodingOptions: { id: BaseEncodingMode; name: string }[] = [
-    { id: "base32-encode", name: "Base32 Encode" },
-    { id: "base32-decode", name: "Base32 Decode" },
-    { id: "base64-encode", name: "Base64 Encode" },
-    { id: "base64-decode", name: "Base64 Decode" },
-  ];
-
   return (
     <div className="sidebar">
       <div className="sidebar-header">
         <h2>DevTools Hub</h2>
-        <p className="sidebar-subtitle">Client-Side Utilities</p>
       </div>
 
       <nav className="sidebar-nav">
@@ -64,12 +45,15 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
             <span className="nav-text">{tool.name}</span>
           </button>
         ))}
-        
+
         {/* Base Encoding Dropdown */}
         <div className="nav-dropdown">
           <button
-            className={`nav-item nav-dropdown-toggle ${isBaseEncodingActive ? "active" : ""}`}
-            onClick={() => setBaseEncodingExpanded(!baseEncodingExpanded)}
+            className={`nav-item nav-dropdown-toggle ${activeTool === "base-encoding" ? "active" : ""}`}
+            onClick={() => {
+              onToolSelect("base-encoding");
+              setBaseEncodingExpanded((prev) => !prev);
+            }}
           >
             <span className="nav-icon">⇅</span>
             <span className="nav-text">Base Encoding</span>
@@ -77,18 +61,22 @@ function Sidebar({ activeTool, onToolSelect }: SidebarProps) {
           </button>
           {baseEncodingExpanded && (
             <div className="nav-dropdown-menu">
-              {baseEncodingOptions.map((option) => (
-                <button
-                  key={option.id}
-                  className={`nav-dropdown-item ${activeTool === option.id ? "active" : ""}`}
-                  onClick={() => {
-                    onToolSelect(option.id);
-                    setBaseEncodingExpanded(false);
-                  }}
-                >
-                  {option.name}
-                </button>
-              ))}
+              <button
+                className="nav-dropdown-item"
+                onClick={() => {
+                  onToolSelect("base32-encode");
+                }}
+              >
+                Base32
+              </button>
+              <button
+                className="nav-dropdown-item"
+                onClick={() => {
+                  onToolSelect("base64-encode");
+                }}
+              >
+                Base64
+              </button>
             </div>
           )}
         </div>

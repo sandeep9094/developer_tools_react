@@ -1,0 +1,392 @@
+/* CONTAINER */
+.rsa-container {
+  padding: 3rem;
+  flex: 1;
+  min-height: 100%;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+}
+
+.dark .rsa-container {
+  background: #0f172a;
+}
+
+/* CARD */
+.rsa-card {
+  width: 100%;
+  max-width: 1600px;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dark .rsa-card {
+  background: #1e293b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* HEADER */
+.rsa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.rsa-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.dark .rsa-title {
+  color: #f8fafc;
+}
+
+.rsa-subtitle {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.dark .rsa-subtitle {
+  color: #94a3b8;
+}
+
+.rsa-header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.rsa-btn-primary,
+.rsa-btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.rsa-btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.rsa-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+.rsa-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rsa-btn-secondary {
+  background: #ffffff;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.rsa-btn-secondary:hover {
+  background-color: #f1f5f9;
+  border-color: #d1d5db;
+}
+
+.dark .rsa-btn-secondary {
+  background: #334155;
+  color: #e2e8f0;
+  border-color: #475569;
+}
+
+.dark .rsa-btn-secondary:hover {
+  background-color: #475569;
+  border-color: #64748b;
+}
+
+/* CONTROLS */
+.rsa-controls {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.rsa-mode-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 240px;
+}
+
+.rsa-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.dark .rsa-label {
+  color: #cbd5e1;
+}
+
+.rsa-select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #111827;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.rsa-select:hover {
+  border-color: #d1d5db;
+}
+
+.rsa-select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dark .rsa-select {
+  background-color: #1e293b;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.dark .rsa-select:hover {
+  border-color: #4b5563;
+}
+
+.dark .rsa-select:focus {
+  border-color: #60a5fa;
+}
+
+.rsa-meta {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.rsa-meta-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-right: 0.25rem;
+}
+
+.rsa-meta-value {
+  font-weight: 600;
+  color: #111827;
+}
+
+.dark .rsa-meta {
+  background: #1e293b;
+  border-color: #374151;
+}
+
+.dark .rsa-meta-label {
+  color: #9ca3af;
+}
+
+.dark .rsa-meta-value {
+  color: #f8fafc;
+}
+
+/* GRID - KEYS */
+.rsa-grid-keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .rsa-grid-keys {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsa-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.rsa-key-header,
+.rsa-io-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 1.5rem;
+}
+
+.rsa-key-textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background-color: #f8fafc;
+  color: #111827;
+  resize: vertical;
+  line-height: 1.5;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  min-height: 220px;
+}
+
+.rsa-key-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+.dark .rsa-key-textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark .rsa-key-textarea:focus {
+  border-color: #3b82f6;
+  background-color: #1e293b;
+}
+
+/* GRID - IO */
+.rsa-grid-io {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .rsa-grid-io {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsa-textarea {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background-color: #f8fafc;
+  color: #111827;
+  resize: vertical;
+  line-height: 1.7;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  min-height: 260px;
+}
+
+.rsa-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+.rsa-textarea[readonly] {
+  background-color: #f8fafc;
+  cursor: default;
+}
+
+.dark .rsa-textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark .rsa-textarea:focus {
+  border-color: #3b82f6;
+  background-color: #1e293b;
+}
+
+.dark .rsa-textarea[readonly] {
+  background-color: #0f172a;
+}
+
+/* STATUS */
+.rsa-status {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.dark .rsa-status {
+  color: #9ca3af;
+}
+
+/* ERROR */
+.rsa-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: 10px;
+  font-weight: 500;
+  border: 1px solid #fecaca;
+}
+
+.dark .rsa-error {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  border-color: #991b1b;
+}
+
+/* INFO */
+.rsa-info {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background-color: #eff6ff;
+  border-radius: 10px;
+  border: 1px solid #bfdbfe;
+}
+
+.rsa-info p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #1e40af;
+  line-height: 1.6;
+}
+
+.rsa-info p:last-child {
+  margin-bottom: 0;
+}
+
+.rsa-info strong {
+  font-weight: 600;
+}
+
+.dark .rsa-info {
+  background-color: #1e3a8a;
+  border-color: #3b82f6;
+}
+
+.dark .rsa-info p {
+  color: #93c5fd;
+}
+
+

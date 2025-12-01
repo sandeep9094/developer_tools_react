@@ -1,0 +1,244 @@
+/* MAIN WRAPPER */
+.json-container {
+  padding: 3rem;
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+.dark .json-container {
+  background-color: #0f172a;
+}
+
+/* CARD */
+.json-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 1600px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.dark .json-card {
+  background: #1e293b;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+}
+
+/* HEADER */
+.json-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.json-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.dark .json-title {
+  color: #f8fafc;
+}
+
+.json-subtitle {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.dark .json-subtitle {
+  color: #94a3b8;
+}
+
+/* BUTTON GROUP */
+.json-header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.json-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.json-btn-format {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.json-btn-format:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+.json-btn-reset {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  color: #374151;
+}
+
+.json-btn-reset:hover {
+  background-color: #f1f5f9;
+  border-color: #d1d5db;
+}
+
+.dark .json-btn-reset {
+  background: #334155;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.dark .json-btn-reset:hover {
+  background-color: #475569;
+  border-color: #64748b;
+}
+
+/* GRID */
+.json-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.json-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.json-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #374151;
+  letter-spacing: 0.04em;
+}
+
+.dark .json-label {
+  color: #cbd5e1;
+}
+
+/* TEXTAREAS */
+.json-textarea {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background-color: #f8fafc;
+  color: #111827;
+  resize: vertical;
+  line-height: 1.7;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  min-height: 400px;
+}
+
+.large-textarea {
+  height: 500px; /* Increased size */
+}
+
+.json-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: white;
+}
+
+.dark .json-textarea {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark .json-textarea:focus {
+  border-color: #3b82f6;
+}
+
+/* OUTPUT HEADER */
+.json-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* COPY BUTTON */
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.copy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
+}
+
+/* STATUS BAR */
+.json-status {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.dark .json-status {
+  background: #334155;
+  border-color: #475569;
+}
+
+.json-status-error {
+  color: #dc2626;
+}
+
+.dark .json-status-error {
+  color: #fca5a5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .json-grid {
+    grid-template-columns: 1fr;
+  }
+}

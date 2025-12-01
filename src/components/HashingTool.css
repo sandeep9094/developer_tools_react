@@ -1,0 +1,387 @@
+/* CONTAINER */
+.hashing-container {
+  padding: 3rem;
+  flex: 1;
+  min-height: 100%;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+}
+
+.dark .hashing-container {
+  background: #0f172a;
+}
+
+/* CARD */
+.hashing-card {
+  width: 100%;
+  max-width: 1600px;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dark .hashing-card {
+  background: #1e293b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* HEADER */
+.hashing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.hashing-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.dark .hashing-title {
+  color: #f8fafc;
+}
+
+.hashing-subtitle {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.dark .hashing-subtitle {
+  color: #94a3b8;
+}
+
+.hashing-header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.hashing-btn-primary,
+.hashing-btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.hashing-btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.hashing-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+.hashing-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hashing-btn-secondary {
+  background: #ffffff;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.hashing-btn-secondary:hover {
+  background-color: #f1f5f9;
+  border-color: #d1d5db;
+}
+
+.dark .hashing-btn-secondary {
+  background: #334155;
+  color: #e2e8f0;
+  border-color: #475569;
+}
+
+.dark .hashing-btn-secondary:hover {
+  background-color: #475569;
+  border-color: #64748b;
+}
+
+/* CONTROLS */
+.hashing-controls {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hashing-algorithm-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 320px;
+}
+
+.hashing-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  padding-top: 0;
+}
+
+.dark .hashing-label {
+  color: #cbd5e1;
+}
+
+.hashing-select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #111827;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.hashing-select:hover {
+  border-color: #d1d5db;
+}
+
+.hashing-select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dark .hashing-select {
+  background-color: #1e293b;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.dark .hashing-select:hover {
+  border-color: #4b5563;
+}
+
+.dark .hashing-select:focus {
+  border-color: #60a5fa;
+}
+
+.hashing-meta {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.hashing-meta-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-right: 0.25rem;
+}
+
+.hashing-meta-value {
+  font-weight: 600;
+  color: #111827;
+}
+
+.dark .hashing-meta {
+  background: #1e293b;
+  border-color: #374151;
+}
+
+.dark .hashing-meta-label {
+  color: #9ca3af;
+}
+
+.dark .hashing-meta-value {
+  color: #f8fafc;
+}
+
+/* GRID */
+.hashing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .hashing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SECTION */
+.hashing-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hashing-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 1.5rem;
+}
+
+.hashing-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 1.5rem;
+}
+
+.copy-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.copy-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.copy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark .copy-button {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark .copy-button:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #6b7280;
+}
+
+/* TEXTAREA */
+.hashing-textarea {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background-color: #f8fafc;
+  color: #111827;
+  resize: vertical;
+  line-height: 1.7;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  min-height: 400px;
+}
+
+.hashing-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: white;
+}
+
+.hashing-textarea[readonly] {
+  background-color: #f8fafc;
+  cursor: default;
+}
+
+.dark .hashing-textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark .hashing-textarea:focus {
+  border-color: #3b82f6;
+  background-color: #1e293b;
+}
+
+.dark .hashing-textarea[readonly] {
+  background-color: #0f172a;
+}
+
+
+/* STATUS */
+.hashing-status {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.dark .hashing-status {
+  color: #9ca3af;
+}
+
+/* ERROR */
+.hashing-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: 10px;
+  font-weight: 500;
+  border: 1px solid #fecaca;
+}
+
+.dark .hashing-error {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  border-color: #991b1b;
+}
+
+/* INFO */
+.hashing-info {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background-color: #eff6ff;
+  border-radius: 10px;
+  border: 1px solid #bfdbfe;
+}
+
+.hashing-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #1e40af;
+  line-height: 1.6;
+}
+
+.hashing-info strong {
+  font-weight: 600;
+}
+
+.dark .hashing-info {
+  background-color: #1e3a8a;
+  border-color: #3b82f6;
+}
+
+.dark .hashing-info p {
+  color: #93c5fd;
+}
+

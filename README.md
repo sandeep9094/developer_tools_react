@@ -1,73 +1,174 @@
-# React + TypeScript + Vite
+# Developer Tools Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive collection of client-side developer utilities built with React and TypeScript. All tools run entirely in your browser - no data is sent to any server, ensuring complete privacy and security.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### JSON Tools
+- **JSON Beautifier** - Format and prettify JSON data with syntax highlighting
+- **JSON Data Generator** - Generate sample JSON data for testing
+- **JSON Schema Validator** - Validate JSON against JSON Schema specifications
 
-## React Compiler
+### Encoding & Decoding
+- **Base32 Encode/Decode** - Encode and decode data using Base32 encoding
+- **Base64 Encode/Decode** - Encode and decode data using Base64 encoding
+- **JWT Token Encoder and Decoder** - Decode and inspect JWT tokens
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Text & Data Tools
+- **Difference Checker** - Compare two texts and highlight differences
+- **Regex Matcher** - Test and match regular expressions against text
+- **Lorem Ipsum Generator** - Generate placeholder text for design and development
+- **CLI Command Line Breaks** - Format long command-line commands with proper line breaks
 
-## Expanding the ESLint configuration
+### Security & Cryptography
+- **Hash Generator** - Generate various hash values (MD5, SHA-1, SHA-256, SHA-512, etc.)
+- **Password Generator** - Generate secure passwords and IDs
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Utilities
+- **UUID Generator** - Generate ULID and UUID identifiers
+- **QR Generator** - Generate QR codes from text or URLs
+- **Color Picker** - Pick colors and get their hex, RGB, and HSL values
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Core Framework
+- **React 19.2.0** - Modern React with latest features
+- **TypeScript** - Type-safe development
+- **Vite 7.2.4** - Fast build tool and development server
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Styling
+- **Tailwind CSS 4.1.17** - Utility-first CSS framework
+- **@tailwindcss/vite** - Tailwind CSS integration for Vite
+
+### Key Dependencies
+- **ajv** - JSON Schema validator
+- **base32 / base32.js** - Base32 encoding/decoding
+- **base64-js** - Base64 encoding/decoding
+- **buffer** - Node.js Buffer polyfill for browser
+- **diff** - Text difference computation
+- **lorem-ipsum** - Lorem Ipsum text generation
+- **nanoid** - Unique ID generation
+- **qrcode.react** - QR code generation
+- **ulid** - ULID generation
+- **uuid** - UUID generation
+
+### Development Tools
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+- **@vitejs/plugin-react** - React plugin for Vite
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd developer_tools
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173` (or the port shown in the terminal)
+
+## 🏗️ Build
+
+To build for production:
+
+```bash
+npm run build
+```
+
+The production build will be in the `dist` directory.
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## 🧪 Linting
+
+Run ESLint to check for code issues:
+
+```bash
+npm run lint
+```
+
+## 🎨 Features
+
+### Dark Mode
+The application supports both light and dark themes with automatic system preference detection. Your theme preference is saved in localStorage.
+
+### Client-Side Processing
+All tools process data entirely in your browser. No data is ever sent to external servers, ensuring:
+- **Privacy** - Your data never leaves your device
+- **Security** - No risk of data interception
+- **Speed** - Instant processing without network latency
+- **Offline Support** - Works without an internet connection (after initial load)
+
+### Modern UI/UX
+- Clean, intuitive interface
+- Responsive sidebar navigation
+- Smooth transitions and animations
+- Accessible design
+
+## 📁 Project Structure
+
+```
+developer_tools/
+├── src/
+│   ├── components/          # React components for each tool
+│   │   ├── Base32Encoding.tsx
+│   │   ├── Base64Encoding.tsx
+│   │   ├── CliCommandBreaks.tsx
+│   │   ├── ColorPicker.tsx
+│   │   ├── DiffChecker.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── HashingTool.tsx
+│   │   ├── IdAndPasswordTool.tsx
+│   │   ├── JsonBeautifier.tsx
+│   │   ├── JsonDataGenerator.tsx
+│   │   ├── JsonSchemaValidator.tsx
+│   │   ├── JwtDecoder.tsx
+│   │   ├── LoremIpsumGenerator.tsx
+│   │   ├── MainScreen.tsx
+│   │   ├── QrGenerator.tsx
+│   │   ├── RegexMatcher.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── UlidUuidGenerator.tsx
+│   ├── types/               # TypeScript type definitions
+│   │   ├── base32-js.d.ts
+│   │   └── tools.ts
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # Application entry point
+│   └── index.css            # Global styles
+├── public/                  # Static assets
+├── package.json             # Dependencies and scripts
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # This file
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is private and not licensed for public use.
+
+## 🙏 Acknowledgments
+
+Built with modern web technologies to provide developers with essential tools in one convenient location.
+
+---
+
+**Note**: This is a client-side application. All processing happens in your browser, ensuring your data remains private and secure.

@@ -161,9 +161,6 @@ developer_tools/
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-
-This project is private and not licensed for public use.
 
 ## 🙏 Acknowledgments
 
